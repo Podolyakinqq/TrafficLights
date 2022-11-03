@@ -38,6 +38,10 @@ class ViewController: UIViewController {
         greenLight.layer.cornerRadius = 75
         yellowLight.layer.cornerRadius = 75
         
+        redLight.alpha = lightIsOff
+        greenLight.alpha = lightIsOff
+        yellowLight.alpha = lightIsOff
+        
         view.backgroundColor = .black
         
         changeButton.setTitle("START", for: .normal)
