@@ -20,13 +20,35 @@ class ViewController: UIViewController {
     @IBOutlet weak var changeButton: UIButton!
     
     // MARK: Private properties
-    private let currentLight = CurrentLight.red
+    private var currentLight = CurrentLight.red
     private let lightIsOn: CGFloat = 1
     private let lightIsOff: CGFloat = 0.3
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+    }
+    
+    
+    @IBAction func changeButtonPressed(_ sender: UIButton) {
+        if changeButton.currentTitle == "START" {
+            changeButton.setTitle("NEXT", for: .normal)
+        }
+        
+        switch currentLight {
+        case .red:
+            redLight.alpha = lightIsOn
+            greenLight.alpha = lightIsOff
+            currentLight = .yellow
+        case .yellow:
+            yellowLight.alpha = lightIsOn
+            redLight.alpha = lightIsOff
+            currentLight = .green
+        case .green:
+            greenLight.alpha = lightIsOn
+            yellowLight.alpha = lightIsOff
+            currentLight = .red
+        }
     }
     
     // MARK: Private funcs
