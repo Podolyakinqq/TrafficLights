@@ -1,0 +1,19 @@
+//
+//  ViewController.swift
+//  TrafficLights
+//
+//  Created by Сергей Подолякин on 3/11/22.
+//
+
+import UIKit
+
+class ViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+
+
+}
+
